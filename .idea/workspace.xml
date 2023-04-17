@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8d682d93-cbc7-4008-a678-319e084c3635" name="Changes" comment="Test der Verbindung zum Git">
-      <change afterPath="$PROJECT_DIR$/src/Ladung.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Raumschiff.java" afterDir="false" />
+    <list default="true" id="8d682d93-cbc7-4008-a678-319e084c3635" name="Changes" comment="Übertragung auf VM">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ladung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ladung.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Raumschiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Raumschiff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/d.krivoruchko/_PROJEKTE/RaumschiffeLight"
+    "last_opened_file_path": "C:/Users/d.krivoruchko/_PROJEKTE/XMLParser",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -56,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681371502289</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Übertragung auf VM">
+      <created>1681722841105</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681722841105</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -72,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test der Verbindung zum Git" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test der Verbindung zum Git" />
+    <MESSAGE value="Übertragung auf VM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Übertragung auf VM" />
   </component>
 </project>
