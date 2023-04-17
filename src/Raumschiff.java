@@ -31,7 +31,7 @@ public class Raumschiff {
     private String schiffsname;
 
     /** Liste der Nachrichten im Broadcast */
-    private static ArrayList<String> broadcastKommunikator;
+    private static ArrayList<String> broadcastKommunikator = new ArrayList<>();
 
     /** Liste der Ladungen */
     private ArrayList<Ladung> ladungsverzeichnis;
@@ -62,6 +62,7 @@ public class Raumschiff {
             lebenserhaltungssystemeInProzent = zustandHuelleInProzent;
             androidenAnzahl = anzahlDroiden;
             this.schiffsname = schiffsname;
+            ladungsverzeichnis = new ArrayList<>();
         }
     }
 
@@ -197,7 +198,7 @@ public class Raumschiff {
      * @param neueLadung Ladung zum Hinzufügen
      */
     public void addLadung(Ladung neueLadung) {
-        ladungsverzeichnis.add(neueLadung);
+        this.ladungsverzeichnis.add(neueLadung);
     }
 
 
@@ -207,7 +208,7 @@ public class Raumschiff {
      */
     public void photonentorpedoSchiessen(Raumschiff r) {
         if (getPhotonentorpedoAnzahl() == 0) {
-            logger.info("-=*Click*=-");
+            nachrichtAnAlle("-=*Click*=-");
         } else {
             photonentorpedoAnzahl--;
             nachrichtAnAlle("Photonentorpedo abgeschossen!");
@@ -236,20 +237,20 @@ public class Raumschiff {
      * @param r Das getroffene Raumschiff
      */
     private void treffer(Raumschiff r) {
-        if (getSchildeInProzent() >= 50) {
-            schildeInProzent -= 50;
-        } else if (getSchildeInProzent() < 50) {
-            setSchildeInProzent(0);
-            huelleInProzent -= 50;
-            energieversorgungInProzent -= 50;
-            if (getEnergieversorgungInProzent() < 0) {
-                setEnergieversorgungInProzent(0);
-            } else if (getHuelleInProzent() <= 0) {
-                setHuelleInProzent(0);
-                nachrichtAnAlle("Die Lebenserhaltungssysteme vernichtet worden!");
+        if (r.getSchildeInProzent() >= 50) {
+            r.schildeInProzent -= 50;
+        } else if (r.getSchildeInProzent() < 50) {
+            r.setSchildeInProzent(0);
+            r.huelleInProzent -= 50;
+            r.energieversorgungInProzent -= 50;
+            if (r.getEnergieversorgungInProzent() < 0) {
+                r.setEnergieversorgungInProzent(0);
+            } else if (r.getHuelleInProzent() <= 0) {
+                r.setHuelleInProzent(0);
+                r.nachrichtAnAlle("Die Lebenserhaltungssysteme vernichtet worden!");
             }
         }
-        logger.info(schiffsname + " wurde getroffen!");
+        logger.info(r.schiffsname + " wurde getroffen!");
     }
 
 
@@ -259,6 +260,7 @@ public class Raumschiff {
      */
     public void nachrichtAnAlle(String message) {
         broadcastKommunikator.add(message);
+        logger.info(message);
     }
 
 
@@ -297,19 +299,14 @@ public class Raumschiff {
 
     /**
      * Methode, um ein Raumschiff zu reparieren
-     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden
-     * @param energieversorgung True, wenn deren Energieversorgung raperiert wird
-     * @param schiffshuelle True, wenn deren Schiffhülle repariert wird
+     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden müsse
+     * @param energieversorgung True, wenn deren Energieversorgung repariert werden muss
+     * @param schiffshuelle True, wenn deren Schiffshülle repariert werden muss
      * @param anzahlDroiden Eingesetzte zur Reparatur Androiden
      */
     public void reparaturDurchfuehren(boolean schutzschilde, boolean energieversorgung,
                                       boolean schiffshuelle, int anzahlDroiden) {
-        int androidenImEinsatz;
-        if (anzahlDroiden > androidenAnzahl) {
-            androidenImEinsatz = androidenAnzahl;
-        } else {
-            androidenImEinsatz = anzahlDroiden;
-        }
+        int androidenImEinsatz = Math.min(anzahlDroiden, androidenAnzahl);
 
         int trueSchiffsstrukturen = 0;
         if (schutzschilde) { trueSchiffsstrukturen++; }
@@ -321,17 +318,21 @@ public class Raumschiff {
         int zufallszahl = random.nextInt(100);
         if (schutzschilde) {
             schildeInProzent += zufallszahl*androidenImEinsatz/trueSchiffsstrukturen;
-            if (schildeInProzent > 100) {
+            if (getSchildeInProzent() > 100) {
                 schildeInProzent = 100;
             }
-        } else if (energieversorgung) {
+        }
+
+        if (energieversorgung) {
             energieversorgungInProzent += zufallszahl*androidenImEinsatz/trueSchiffsstrukturen;
-            if (energieversorgungInProzent > 100) {
+            if (getEnergieversorgungInProzent() > 100) {
                 energieversorgungInProzent = 100;
             }
-        } else if (schiffshuelle) {
+        }
+
+        if (schiffshuelle) {
             huelleInProzent += zufallszahl*androidenImEinsatz/trueSchiffsstrukturen;
-            if (huelleInProzent > 100) {
+            if (getHuelleInProzent() > 100) {
                 huelleInProzent = 100;
             }
         }
@@ -365,11 +366,7 @@ public class Raumschiff {
      * Methode löscht eine Ladung aus dem Ladungsverzeichnis, wenn deren Menge ist 0
      */
     public void ladungsverzeichnisAufraeumen() {
-        for (Ladung ladung:ladungsverzeichnis) {
-            if (ladung.getMenge() == 0) {
-                ladungsverzeichnis.remove(ladung);
-            }
-        }
+        ladungsverzeichnis.removeIf(ladung -> ladung.getMenge() == 0);
     }
 
     /**
