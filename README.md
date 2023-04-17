@@ -1,5 +1,15 @@
 # RaumshiffeLight
 Lernsituation Raumschiffe
+
+
+A3.3: Loeser KlassendiagrammOOD StarTrek ⭐⭐
+
+Modellieren Sie die Beziehung zwischen der Klasse Raumschiff und der Klasse Ladung. Ein Raumschiff kann keine oder mehrere Ladungen transportieren. Eine Ladung wird genau von einem Raumschiff transportiert. Ein Raumschiff kennt seine Ladungen, aber die Ladung weiss nicht, in welchen Raumschiff sie transportiert wird.
+
+![Aufgabe 4 Loeser_KlassendiagrammOOD_StarTrek](https://user-images.githubusercontent.com/68115186/232491685-897d7674-916d-4558-914d-e53033635e2c.png)
+
+
+
 A4.2: Implementierung der Methoden ⭐⭐⭐
 
 LS02-5-02 Arbeitsauftrag: Implementierung der Klassen Raumschiff und Ladung
@@ -71,3 +81,25 @@ Klasse Ladung
 Beim Überschreiben von toString() stellen Sie die Annotation @Override der Methodensignatur voran. Diese Anmerkung ist freiwillig, gehört aber zum guten Stil und bietet zwei Vorteile:
   - Besserer Lesbarkeit des Codes.
   - Der Compiler prüft, ob tatsächlich eine Methode aus einer Oberklasse überschrieben wird. Ist die Methodensignatur nicht identisch mit einer Methode aus einer Superklasse (d.h. es würde eine neue Methode hinzugefügt oder eine Methode überladen), erhalten wir praktischerweise eine Compiler-Meldung (etwa: Method does not override method from its superclass).
+  
+
+
+Endzustand für Experten ⭐⭐⭐ 
+
+![Aufgabe 5 Endzustand Experten](https://user-images.githubusercontent.com/68115186/232490919-fd83465e-bd63-45ea-ba67-f060ede7615a.png)
+
+
+
+LS02-5-02.1 Arbeitsauftrag: Quellcode verwenden und überprüfen
+
+Ihre Methoden sollen nun Verwendung finden. Führen Sie in der Mainmethode die folgenden Methoden aus und überprüfen Sie die Werte am Ende der Ausführung mithilfe des 2. Objektdiagramms.
+Auszuführende Methoden in der Main:
+- Die Klingonen schießen mit dem Photonentorpedo einmal auf die Romulaner.
+- Die Romulaner schießen mit der Phaserkanone zurück.
+- Die Vulkanier senden eine Nachricht an Alle “Gewalt ist nicht logisch”.
+- Die Klingonen rufen den Zustand Ihres Raumschiffes ab und geben Ihr Ladungsverzeichnis aus
+- Die Vulkanier sind sehr sicherheitsbewusst und setzen alle Androiden zur Aufwertung ihres Schiffes ein.
+- Die Vulkanier verladen Ihre Ladung “Photonentorpedos” in die Torpedoröhren Ihres Raumschiffes und räumen das Ladungsverzeichnis auf. 
+- Die Klingonen schießen mit zwei weiteren Photonentorpedo auf die Romulaner.
+- Die Klingonen, die Romulaner und die Vulkanier rufen jeweils den Zustand Ihres Raumschiffes ab und geben Ihr Ladungsverzeichnis aus.
+- Geben Sie den broadcastKommunikator aus. 
