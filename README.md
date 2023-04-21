@@ -2,7 +2,7 @@
 Lernsituation Raumschiffe
 
 
-A3.3: Loeser KlassendiagrammOOD StarTrek ⭐⭐
+A3.3: KlassendiagrammOOD StarTrek
 
 Modellieren Sie die Beziehung zwischen der Klasse Raumschiff und der Klasse Ladung. Ein Raumschiff kann keine oder mehrere Ladungen transportieren. Eine Ladung wird genau von einem Raumschiff transportiert. Ein Raumschiff kennt seine Ladungen, aber die Ladung weiss nicht, in welchen Raumschiff sie transportiert wird.
 
@@ -10,9 +10,9 @@ Modellieren Sie die Beziehung zwischen der Klasse Raumschiff und der Klasse Ladu
 
 
 
-A4.2: Implementierung der Methoden ⭐⭐⭐
+A4.2: Implementierung der Methoden
 
-LS02-5-02 Arbeitsauftrag: Implementierung der Klassen Raumschiff und Ladung
+LS02-5-02: Implementierung der Klassen Raumschiff und Ladung
 
 Implementieren Sie die im OOD Klassendiagramm modellierten Methoden in Quellcode.
 Achten Sie auf die allgemeingültigen Formatierungen des Quellcodes in Java, insbesondere einheitliche Zeilenabstände, geschweifte Klammern und die korrekte Einrückung des Quellcodes.
@@ -84,13 +84,13 @@ Beim Überschreiben von toString() stellen Sie die Annotation @Override der Meth
   
 
 
-Endzustand für Experten ⭐⭐⭐ 
+Endzustand 
 
 ![Aufgabe 5 Endzustand Experten](https://user-images.githubusercontent.com/68115186/232490919-fd83465e-bd63-45ea-ba67-f060ede7615a.png)
 
 
 
-LS02-5-02.1 Arbeitsauftrag: Quellcode verwenden und überprüfen
+LS02-5-02.1: Quellcode verwenden und überprüfen
 
 Ihre Methoden sollen nun Verwendung finden. Führen Sie in der Mainmethode die folgenden Methoden aus und überprüfen Sie die Werte am Ende der Ausführung mithilfe des 2. Objektdiagramms.
 Auszuführende Methoden in der Main:
