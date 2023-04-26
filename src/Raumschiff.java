@@ -38,6 +38,12 @@ public class Raumschiff {
 
 
     /**
+     * Standartkonstruktor der Raumschiffe
+     */
+    public Raumschiff() {}
+
+
+    /**
      * Konstruktor der Raumschiffe
      * @param photonentorpedoAnzahl Anzahl der Photonentorpedos
      * @param energieversorgungInProzent Niveau der Energieversorgung in Prozent

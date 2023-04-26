@@ -12,6 +12,12 @@ public class Ladung {
 
 
     /**
+     * Standartkonstruktor der Ladung
+     */
+    public Ladung() {}
+
+
+    /**
      * Konstruktor der Ladung
      * @param bezeichnung Bezeichnung der Ladung
      * @param menge Menge der Ladung

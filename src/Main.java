@@ -30,13 +30,13 @@ public class Main {
 
         klingonen.photonentorpedoSchiessen(romulaner); // Die Klingonen schießen mit dem Photonentorpedo einmal auf die Romulaner.
         romulaner.phaserkanoneSchiessen(klingonen); // Die Romulaner schießen mit der Phaserkanone zurück.
-        vulkanier.nachrichtAnAlle("Gewalt ist nicht logisch"); // Die Vulkanier senden eine Nachricht an Alle “Gewalt ist nicht logisch”.
+        vulkanier.nachrichtAnAlle("Gewalt ist nicht logisch"); // Die Vulkanier senden eine Nachricht an Alle.
         klingonen.zustandRaumschiff(); // Die Klingonen rufen den Zustand Ihres Raumschiffes ab und...
         klingonen.ladungsverzeichnisAusgeben(); // ...geben Ihr Ladungsverzeichnis aus
         vulkanier.zustandRaumschiff();
         vulkanier.reparaturDurchfuehren(true, true, true, vulkanier.getAndroidenAnzahl()); // Die Vulkanier sind sehr sicherheitsbewusst und setzen alle Androiden zur Aufwertung ihres Schiffes ein.
         vulkanier.zustandRaumschiff();
-        vulkanier.photonentorpedosLaden(20); // Die Vulkanier verladen Ihre Ladung “Photonentorpedos” in die Torpedoröhren Ihres Raumschiffes und...
+        vulkanier.photonentorpedosLaden(20); // Die Vulkanier verladen Ihre Ladung Photonentorpedos in die Torpedoröhren Ihres Raumschiffes und...
         vulkanier.ladungsverzeichnisAusgeben();
         vulkanier.ladungsverzeichnisAufraeumen(); // ...räumen das Ladungsverzeichnis auf.
         vulkanier.ladungsverzeichnisAusgeben();
