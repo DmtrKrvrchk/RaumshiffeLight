@@ -14,6 +14,7 @@ public class Ladung {
     /**
      * Standartkonstruktor der Ladung
      */
+    //TODO warum gibts diesen Kontruktur, wenn er nirgends verwendet wird?
     public Ladung() {}
 
 
@@ -32,6 +33,7 @@ public class Ladung {
      * Methode legt eine neue Bezeichnung für die Ladung fest
      * @param name Neue Bezeichnung
      */
+    //TODO wird aktuell nicht genutzt
     public void setBezeichnung(String name) {
         bezeichnung = name;
     }

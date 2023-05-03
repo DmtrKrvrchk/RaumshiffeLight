@@ -31,9 +31,11 @@ public class Raumschiff {
     private String schiffsname;
 
     /** Liste der Nachrichten im Broadcast */
+    //TODO final?
     private static ArrayList<String> broadcastKommunikator = new ArrayList<>();
 
     /** Liste der Ladungen */
+    //TODO warum diese Liste nicht initialisiert?
     private ArrayList<Ladung> ladungsverzeichnis;
 
 
@@ -55,6 +57,7 @@ public class Raumschiff {
      */
     public Raumschiff(int photonentorpedoAnzahl, int energieversorgungInProzent, int zustandSchildeInProzent,
                       int zustandHuelleInProzent, int zustandLebenserhaltungssystemeInProzent, String schiffsname, int anzahlDroiden) {
+        //TODO ganz schön unübersichtlich, in eine eigene methode auslagern und eventuell vereinfachen
         if (photonentorpedoAnzahl < 0 || energieversorgungInProzent < 0 || zustandHuelleInProzent < 0 ||
         zustandSchildeInProzent < 0 || zustandLebenserhaltungssystemeInProzent < 0 || anzahlDroiden < 0 ||
         energieversorgungInProzent > 100 || zustandHuelleInProzent > 100 || zustandSchildeInProzent > 100 ||
@@ -86,6 +89,7 @@ public class Raumschiff {
      * Methode legt die Anzahl der Photonentorpedos fest
      * @param photonentorpedoAnzahlNeu Anzahl der Photonentorpedos zum Festlegen
      */
+    //TODO wird aktuell nicht genutzt
     public void setPhotonentorpedoAnzahl(int photonentorpedoAnzahlNeu) {
         photonentorpedoAnzahl = photonentorpedoAnzahlNeu;
     }
@@ -149,6 +153,7 @@ public class Raumschiff {
      * Methode gibt den Zustand der Lebenserhaltungssysteme in Prozent zurück
      * @return Zustand der Lebenserhaltungssysteme
      */
+    //TODO wird aktuell nicht genutzt
     public int getLebenserhaltungssystemeInProzent() {
         return lebenserhaltungssystemeInProzent;
     }
@@ -158,6 +163,7 @@ public class Raumschiff {
      * Methode legt den Zustand der Lebenserhaltungssysteme in Prozent fest
      * @param zustandLebenserhaltungssystemeInProzentNeu Zustand der Lebenserhaltungssysteme zum Festlegen
      */
+    //TODO wird aktuell nicht genutzt
     public void setLebenserhaltungssystemeInProzent(int zustandLebenserhaltungssystemeInProzentNeu) {
         lebenserhaltungssystemeInProzent = zustandLebenserhaltungssystemeInProzentNeu;
     }
@@ -176,6 +182,7 @@ public class Raumschiff {
      * Methode legt die Anzahl der Androiden fest
      * @param androidenAnzahl Anzahl der Androiden zum Festlegen
      */
+    //TODO wird aktuell nicht genutzt
     public void setAndroidenAnzahl(int androidenAnzahl) {
         this.androidenAnzahl = androidenAnzahl;
     }
@@ -185,6 +192,7 @@ public class Raumschiff {
      * Methode gibt den Namen des Schiffes zurück
      * @return Name des Schiffes
      */
+    //TODO wird aktuell nicht genutzt
     public String getSchiffsname() {
         return schiffsname;
     }
@@ -194,6 +202,7 @@ public class Raumschiff {
      * Methode legt den Namen des Schiffes fest
      * @param schiffsname Name des Schiffes
      */
+    //TODO wird aktuell nicht genutzt
     public void setSchiffsname(String schiffsname) {
         this.schiffsname = schiffsname;
     }
@@ -212,6 +221,7 @@ public class Raumschiff {
      * Methode, um ein anderes Raumschiff mit Photonentorpedos abzuschießen
      * @param r Raumschiff, das abgeschossen wird
      */
+    //TODO Variablenname "r" ist unschön
     public void photonentorpedoSchiessen(Raumschiff r) {
         if (getPhotonentorpedoAnzahl() == 0) {
             nachrichtAnAlle("-=*Click*=-");
@@ -227,6 +237,7 @@ public class Raumschiff {
      * Methode, um ein anderes Raumschiff aus Phaserkanone abzuschießen
      * @param r Raumschiff, das abgeschossen wird
      */
+    //TODO Variablenname "r" ist unschön
     public void phaserkanoneSchiessen(Raumschiff r) {
         if (getEnergieversorgungInProzent() < 50) {
             logger.info("-=*Click*=-");
@@ -242,6 +253,7 @@ public class Raumschiff {
      * Methode vermerkt einen Treffer
      * @param r Das getroffene Raumschiff
      */
+    //TODO Variablenname "r" ist unschön
     private void treffer(Raumschiff r) {
         if (r.getSchildeInProzent() >= 50) {
             r.schildeInProzent -= 50;
