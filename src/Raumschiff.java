@@ -182,7 +182,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt den Namen des Schiffes zurück
+     * Methode gibt den Namen des Schiffes zurueck
      * @return Name des Schiffes
      */
     public String getSchiffsname() {
@@ -262,7 +262,7 @@ public class Raumschiff {
 
     /**
      * Methode, um eine Nachricht dem broadcastKommunikator hinzuzufügen
-     * @param message Nachricht zum Hinzufügen
+     * @param message Nachricht zum Hinzufuegen
      */
     public void nachrichtAnAlle(String message) {
         broadcastKommunikator.add(message);
@@ -271,7 +271,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt alle Nachrichten aus dem broadcastKommunikator zurück
+     * Methode gibt alle Nachrichten aus dem broadcastKommunikator zurueck
      * @return alle Nachrichten aus dem broadcastKommunikator
      */
     public static ArrayList<String> eintrageLogbuchZurueckgeben() {
