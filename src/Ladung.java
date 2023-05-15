@@ -38,7 +38,7 @@ public class Ladung {
 
 
     /**
-     * Methode gibt die Bezeichnung der Ladung zurück
+     * Methode gibt die Bezeichnung der Ladung zurueck
      * @return Bezeichnung der Ladung
      */
     public String getBezeichnung() {
@@ -56,7 +56,7 @@ public class Ladung {
 
 
     /**
-     * Methode gibt die Menge der Ladung zurück
+     * Methode gibt die Menge der Ladung zurueck
      * @return Menge der Ladung
      */
     public int getMenge() {
@@ -65,7 +65,7 @@ public class Ladung {
 
 
     /**
-     * Methode gibt die Information über die Ladung in String-Form zurück
+     * Methode gibt die Information über die Ladung in String-Form zurueck
      * @return Information über die Ladung mit deren Bezeichnung und Ladung
      */
     @Override

@@ -18,7 +18,7 @@ public class Raumschiff {
     /** Zustand der Schilde in Prozent*/
     private int schildeInProzent;
 
-    /** Zustand der Hülle in Prozent */
+    /** Zustand der Huelle in Prozent */
     private int huelleInProzent;
 
     /** Zustand der Lebenserhaltungssysteme in Prozent */
@@ -48,7 +48,7 @@ public class Raumschiff {
      * @param photonentorpedoAnzahl Anzahl der Photonentorpedos
      * @param energieversorgungInProzent Niveau der Energieversorgung in Prozent
      * @param zustandSchildeInProzent Zustand der Schilde in Prozent
-     * @param zustandHuelleInProzent Zustand der Hülle in Prozent
+     * @param zustandHuelleInProzent Zustand der Huelle in Prozent
      * @param zustandLebenserhaltungssystemeInProzent Zustand der Lebenserhaltungssysteme in Prozent
      * @param schiffsname Name des Raumschiffes
      * @param anzahlDroiden Anzahl der Androiden
@@ -59,7 +59,7 @@ public class Raumschiff {
         zustandSchildeInProzent < 0 || zustandLebenserhaltungssystemeInProzent < 0 || anzahlDroiden < 0 ||
         energieversorgungInProzent > 100 || zustandHuelleInProzent > 100 || zustandSchildeInProzent > 100 ||
         zustandLebenserhaltungssystemeInProzent > 100) {
-            logger.info("Kein Parameter des Raumschiffes darf negativ sein! Alle Angaben in % dürfen nicht größer als 100% sein!");
+            logger.info("Kein Parameter des Raumschiffes darf negativ sein! Alle Angaben in % duerfen nicht groeßer als 100% sein!");
         } else {
             this.photonentorpedoAnzahl = photonentorpedoAnzahl;
             this.energieversorgungInProzent = energieversorgungInProzent;
@@ -74,7 +74,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt die Anzahl der Photonentorpedos zurück
+     * Methode gibt die Anzahl der Photonentorpedos zurueck
      * @return Anzahl der Photonentorpedos
      */
     public int getPhotonentorpedoAnzahl() {
@@ -92,7 +92,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt den Zustand der Energieversorgung in Prozent zurück
+     * Methode gibt den Zustand der Energieversorgung in Prozent zurueck
      * @return Niveau der Energieversorgung in Prozent
      */
     public int getEnergieversorgungInProzent() {
@@ -110,7 +110,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt den Zustand der Schilde in Prozent zurück
+     * Methode gibt den Zustand der Schilde in Prozent zurueck
      * @return Zustand der Schilde in Prozent
      */
     public int getSchildeInProzent() {
@@ -128,7 +128,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt den Zustand der Hülle in Prozent zurück
+     * Methode gibt den Zustand der Hülle in Prozent zurueck
      * @return Zustand der Hülle in Prozent
      */
     public int getHuelleInProzent() {
@@ -138,7 +138,7 @@ public class Raumschiff {
 
     /**
      * Methode legt den Zustand der Hülle in Prozent fest
-     * @param zustandHuelleInProzentNeu Zustand der Hülle zum Festlegen
+     * @param zustandHuelleInProzentNeu Zustand der Huelle zum Festlegen
      */
     public void setHuelleInProzent(int zustandHuelleInProzentNeu) {
         huelleInProzent = zustandHuelleInProzentNeu;
@@ -146,7 +146,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt den Zustand der Lebenserhaltungssysteme in Prozent zurück
+     * Methode gibt den Zustand der Lebenserhaltungssysteme in Prozent zurueck
      * @return Zustand der Lebenserhaltungssysteme
      */
     public int getLebenserhaltungssystemeInProzent() {
@@ -164,7 +164,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt die Anzahl der Androiden zurück
+     * Methode gibt die Anzahl der Androiden zurueck
      * @return Anzahl der Androiden
      */
     public int getAndroidenAnzahl() {
@@ -200,7 +200,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode fügt eine neue Ladung zum Ladungsverzeichnis hinzu
+     * Methode fuegt eine neue Ladung zum Ladungsverzeichnis hinzu
      * @param neueLadung Ladung zum Hinzufügen
      */
     public void addLadung(Ladung neueLadung) {
@@ -210,53 +210,53 @@ public class Raumschiff {
 
     /**
      * Methode, um ein anderes Raumschiff mit Photonentorpedos abzuschießen
-     * @param r Raumschiff, das abgeschossen wird
+     * @param raumschiff Raumschiff, das abgeschossen wird
      */
-    public void photonentorpedoSchiessen(Raumschiff r) {
+    public void photonentorpedoSchiessen(Raumschiff raumschiff) {
         if (getPhotonentorpedoAnzahl() == 0) {
             nachrichtAnAlle("-=*Click*=-");
         } else {
             photonentorpedoAnzahl--;
             nachrichtAnAlle("Photonentorpedo abgeschossen!");
-            treffer(r);
+            treffer(raumschiff);
         }
     }
 
 
     /**
      * Methode, um ein anderes Raumschiff aus Phaserkanone abzuschießen
-     * @param r Raumschiff, das abgeschossen wird
+     * @param raumschiff Raumschiff, das abgeschossen wird
      */
-    public void phaserkanoneSchiessen(Raumschiff r) {
+    public void phaserkanoneSchiessen(Raumschiff raumschiff) {
         if (getEnergieversorgungInProzent() < 50) {
             logger.info("-=*Click*=-");
         } else {
             energieversorgungInProzent -= 50;
             nachrichtAnAlle("Phaserkanone abgeschossen!");
-            treffer(r);
+            treffer(raumschiff);
         }
 
     }
 
     /**
      * Methode vermerkt einen Treffer
-     * @param r Das getroffene Raumschiff
+     * @param raumschiff Das getroffene Raumschiff
      */
-    private void treffer(Raumschiff r) {
-        if (r.getSchildeInProzent() >= 50) {
-            r.schildeInProzent -= 50;
-        } else if (r.getSchildeInProzent() < 50) {
-            r.setSchildeInProzent(0);
-            r.huelleInProzent -= 50;
-            r.energieversorgungInProzent -= 50;
-            if (r.getEnergieversorgungInProzent() < 0) {
-                r.setEnergieversorgungInProzent(0);
-            } else if (r.getHuelleInProzent() <= 0) {
-                r.setHuelleInProzent(0);
-                r.nachrichtAnAlle("Die Lebenserhaltungssysteme vernichtet worden!");
+    private void treffer(Raumschiff raumschiff) {
+        if (raumschiff.getSchildeInProzent() >= 50) {
+            raumschiff.schildeInProzent -= 50;
+        } else if (raumschiff.getSchildeInProzent() < 50) {
+            raumschiff.setSchildeInProzent(0);
+            raumschiff.huelleInProzent -= 50;
+            raumschiff.energieversorgungInProzent -= 50;
+            if (raumschiff.getEnergieversorgungInProzent() < 0) {
+                raumschiff.setEnergieversorgungInProzent(0);
+            } else if (raumschiff.getHuelleInProzent() <= 0) {
+                raumschiff.setHuelleInProzent(0);
+                raumschiff.nachrichtAnAlle("Die Lebenserhaltungssysteme vernichtet worden!");
             }
         }
-        logger.info(r.schiffsname + " wurde getroffen!");
+        logger.info(raumschiff.schiffsname + " wurde getroffen!");
     }
 
 
@@ -280,8 +280,8 @@ public class Raumschiff {
 
 
     /**
-     * Methode, um Photonentorpedo(s) einzusetzen
-     * @param anzahlTorpedos Anzahl der Photonentorpedo(s) zum Einsetzen
+     * Methode, um Photonentorpedos einzusetzen
+     * @param anzahlTorpedos Anzahl der Photonentorpedos zum Einsetzen
      */
     public void photonentorpedosLaden(int anzahlTorpedos) {
         for (Ladung ladung:ladungsverzeichnis) {
@@ -305,7 +305,7 @@ public class Raumschiff {
 
     /**
      * Methode, um ein Raumschiff zu reparieren
-     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden müsse
+     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden muesse
      * @param energieversorgung True, wenn deren Energieversorgung repariert werden muss
      * @param schiffshuelle True, wenn deren Schiffshülle repariert werden muss
      * @param anzahlDroiden Eingesetzte zur Reparatur Androiden
@@ -349,12 +349,12 @@ public class Raumschiff {
      * Methode gibt die Information über das Raumschiff aus
      */
     public void zustandRaumschiff() {
-        logger.info("Der Kapitän und seine Crew heißen Sie Herzlich Willkommen an Bord des Schiffes "+schiffsname+
+        logger.info("Der Kapitaen und seine Crew heißen Sie Herzlich Willkommen an Bord des Schiffes "+schiffsname+
                 " und informieren Sie über den Zustand des Schiffes."+
                 "\r\n"+"Anzahl der Photonentorpedos: "+photonentorpedoAnzahl+";"+
                 "\r\n"+"Energieversorgung: "+energieversorgungInProzent+"%;"+
                 "\r\n"+"Zustand der Schilde: "+schildeInProzent+"%;"+
-                "\r\n"+"Zustand der Hülle: "+huelleInProzent+"%;"+
+                "\r\n"+"Zustand der Huelle: "+huelleInProzent+"%;"+
                 "\r\n"+"Zustand des Lebenserhaltungssystems: "+lebenserhaltungssystemeInProzent+"%;"+
                 "\r\n"+"Anzahl der Androiden: "+androidenAnzahl+";");
     }
@@ -369,7 +369,7 @@ public class Raumschiff {
 
 
     /**
-     * Methode löscht eine Ladung aus dem Ladungsverzeichnis, wenn deren Menge ist 0
+     * Methode loescht eine Ladung aus dem Ladungsverzeichnis, wenn deren Menge ist 0
      */
     public void ladungsverzeichnisAufraeumen() {
         ladungsverzeichnis.removeIf(ladung -> ladung.getMenge() == 0);
