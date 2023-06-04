@@ -42,7 +42,6 @@ public class Raumschiff {
      */
     public Raumschiff() {}
 
-
     /**
      * Konstruktor der Raumschiffe
      * @param photonentorpedoAnzahl Anzahl der Photonentorpedos
@@ -74,132 +73,6 @@ public class Raumschiff {
 
 
     /**
-     * Methode gibt die Anzahl der Photonentorpedos zurueck
-     * @return Anzahl der Photonentorpedos
-     */
-    public int getPhotonentorpedoAnzahl() {
-        return photonentorpedoAnzahl;
-    }
-
-
-    /**
-     * Methode legt die Anzahl der Photonentorpedos fest
-     * @param photonentorpedoAnzahlNeu Anzahl der Photonentorpedos zum Festlegen
-     */
-    public void setPhotonentorpedoAnzahl(int photonentorpedoAnzahlNeu) {
-        photonentorpedoAnzahl = photonentorpedoAnzahlNeu;
-    }
-
-
-    /**
-     * Methode gibt den Zustand der Energieversorgung in Prozent zurueck
-     * @return Niveau der Energieversorgung in Prozent
-     */
-    public int getEnergieversorgungInProzent() {
-        return energieversorgungInProzent;
-    }
-
-
-    /**
-     * Methode legt den Zustand der Energieversorgung in Prozent fest
-     * @param zustandEnergieversorgungInProzentNeu Niveau der Energieversorgung in Prozent zum Festlegen
-     */
-    public void setEnergieversorgungInProzent(int zustandEnergieversorgungInProzentNeu) {
-        energieversorgungInProzent = zustandEnergieversorgungInProzentNeu;
-    }
-
-
-    /**
-     * Methode gibt den Zustand der Schilde in Prozent zurueck
-     * @return Zustand der Schilde in Prozent
-     */
-    public int getSchildeInProzent() {
-        return schildeInProzent;
-    }
-
-
-    /**
-     * Methode legt den Zustand der Schilde in Prozent fest
-     * @param zustandSchildeInProzentNeu Zustand der Schilde in Prozent zum Festlegen
-     */
-    public void setSchildeInProzent(int zustandSchildeInProzentNeu) {
-        schildeInProzent = zustandSchildeInProzentNeu;
-    }
-
-
-    /**
-     * Methode gibt den Zustand der Hülle in Prozent zurueck
-     * @return Zustand der Hülle in Prozent
-     */
-    public int getHuelleInProzent() {
-        return huelleInProzent;
-    }
-
-
-    /**
-     * Methode legt den Zustand der Hülle in Prozent fest
-     * @param zustandHuelleInProzentNeu Zustand der Huelle zum Festlegen
-     */
-    public void setHuelleInProzent(int zustandHuelleInProzentNeu) {
-        huelleInProzent = zustandHuelleInProzentNeu;
-    }
-
-
-    /**
-     * Methode gibt den Zustand der Lebenserhaltungssysteme in Prozent zurueck
-     * @return Zustand der Lebenserhaltungssysteme
-     */
-    public int getLebenserhaltungssystemeInProzent() {
-        return lebenserhaltungssystemeInProzent;
-    }
-
-
-    /**
-     * Methode legt den Zustand der Lebenserhaltungssysteme in Prozent fest
-     * @param zustandLebenserhaltungssystemeInProzentNeu Zustand der Lebenserhaltungssysteme zum Festlegen
-     */
-    public void setLebenserhaltungssystemeInProzent(int zustandLebenserhaltungssystemeInProzentNeu) {
-        lebenserhaltungssystemeInProzent = zustandLebenserhaltungssystemeInProzentNeu;
-    }
-
-
-    /**
-     * Methode gibt die Anzahl der Androiden zurueck
-     * @return Anzahl der Androiden
-     */
-    public int getAndroidenAnzahl() {
-        return androidenAnzahl;
-    }
-
-
-    /**
-     * Methode legt die Anzahl der Androiden fest
-     * @param androidenAnzahl Anzahl der Androiden zum Festlegen
-     */
-    public void setAndroidenAnzahl(int androidenAnzahl) {
-        this.androidenAnzahl = androidenAnzahl;
-    }
-
-
-    /**
-     * Methode gibt den Namen des Schiffes zurueck
-     * @return Name des Schiffes
-     */
-    public String getSchiffsname() {
-        return schiffsname;
-    }
-
-
-    /**
-     * Methode legt den Namen des Schiffes fest
-     * @param schiffsname Name des Schiffes
-     */
-    public void setSchiffsname(String schiffsname) {
-        this.schiffsname = schiffsname;
-    }
-
-
-    /**
      * Methode fuegt eine neue Ladung zum Ladungsverzeichnis hinzu
      * @param neueLadung Ladung zum Hinzufügen
      */
@@ -207,9 +80,8 @@ public class Raumschiff {
         this.ladungsverzeichnis.add(neueLadung);
     }
 
-
     /**
-     * Methode, um ein anderes Raumschiff mit Photonentorpedos abzuschießen
+     * Methode, um ein anderes Raumschiff mit Photonentorpedos abzuschiessen
      * @param raumschiff Raumschiff, das abgeschossen wird
      */
     public void photonentorpedoSchiessen(Raumschiff raumschiff) {
@@ -222,9 +94,8 @@ public class Raumschiff {
         }
     }
 
-
     /**
-     * Methode, um ein anderes Raumschiff aus Phaserkanone abzuschießen
+     * Methode, um ein anderes Raumschiff aus Phaserkanone abzuschiessen
      * @param raumschiff Raumschiff, das abgeschossen wird
      */
     public void phaserkanoneSchiessen(Raumschiff raumschiff) {
@@ -259,7 +130,6 @@ public class Raumschiff {
         logger.info(raumschiff.schiffsname + " wurde getroffen!");
     }
 
-
     /**
      * Methode, um eine Nachricht dem broadcastKommunikator hinzuzufügen
      * @param message Nachricht zum Hinzufuegen
@@ -269,7 +139,6 @@ public class Raumschiff {
         logger.info(message);
     }
 
-
     /**
      * Methode gibt alle Nachrichten aus dem broadcastKommunikator zurueck
      * @return alle Nachrichten aus dem broadcastKommunikator
@@ -277,7 +146,6 @@ public class Raumschiff {
     public static ArrayList<String> eintrageLogbuchZurueckgeben() {
         return broadcastKommunikator;
     }
-
 
     /**
      * Methode, um Photonentorpedos einzusetzen
@@ -302,10 +170,9 @@ public class Raumschiff {
         }
     }
 
-
     /**
      * Methode, um ein Raumschiff zu reparieren
-     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden muesse
+     * @param schutzschilde True, wenn dessen Schutzschilde repariert werden muss
      * @param energieversorgung True, wenn deren Energieversorgung repariert werden muss
      * @param schiffshuelle True, wenn deren Schiffshülle repariert werden muss
      * @param anzahlDroiden Eingesetzte zur Reparatur Androiden
@@ -344,7 +211,6 @@ public class Raumschiff {
         }
     }
 
-
     /**
      * Methode gibt die Information über das Raumschiff aus
      */
@@ -359,14 +225,12 @@ public class Raumschiff {
                 "\r\n"+"Anzahl der Androiden: "+androidenAnzahl+";");
     }
 
-
     /**
      * Methode listet Ladungsverzeichnis auf
      */
     public void ladungsverzeichnisAusgeben() {
         logger.info(ladungsverzeichnis.toString());
     }
-
 
     /**
      * Methode loescht eine Ladung aus dem Ladungsverzeichnis, wenn deren Menge ist 0
@@ -380,4 +244,98 @@ public class Raumschiff {
      */
     Logger logger = Logger.getLogger(String.valueOf(Raumschiff.class));
 
+
+    /**
+     * Methode legt die Anzahl der Photonentorpedos fest
+     * @param photonentorpedoAnzahlNeu Anzahl der Photonentorpedos zum Festlegen
+     */
+    public void setPhotonentorpedoAnzahl(int photonentorpedoAnzahlNeu) { photonentorpedoAnzahl = photonentorpedoAnzahlNeu; }
+
+    /**
+     * Methode gibt die Anzahl der Photonentorpedos zurueck
+     * @return Anzahl der Photonentorpedos
+     */
+    public int getPhotonentorpedoAnzahl() { return photonentorpedoAnzahl; }
+
+    /**
+     * Methode legt den Zustand der Energieversorgung in Prozent fest
+     * @param zustandEnergieversorgungInProzentNeu Niveau der Energieversorgung in Prozent zum Festlegen
+     */
+    public void setEnergieversorgungInProzent(int zustandEnergieversorgungInProzentNeu) { energieversorgungInProzent = zustandEnergieversorgungInProzentNeu; }
+
+    /**
+     * Methode gibt den Zustand der Energieversorgung in Prozent zurueck
+     * @return Niveau der Energieversorgung in Prozent
+     */
+    public int getEnergieversorgungInProzent() { return energieversorgungInProzent; }
+
+    /**
+     * Methode legt den Zustand der Schilde in Prozent fest
+     * @param zustandSchildeInProzentNeu Zustand der Schilde in Prozent zum Festlegen
+     */
+    public void setSchildeInProzent(int zustandSchildeInProzentNeu) { schildeInProzent = zustandSchildeInProzentNeu; }
+
+    /**
+     * Methode gibt den Zustand der Schilde in Prozent zurueck
+     * @return Zustand der Schilde in Prozent
+     */
+    public int getSchildeInProzent() { return schildeInProzent; }
+
+    /**
+     * Methode legt den Zustand der Huelle in Prozent fest
+     * @param zustandHuelleInProzentNeu Zustand der Huelle zum Festlegen
+     */
+    public void setHuelleInProzent(int zustandHuelleInProzentNeu) {
+        huelleInProzent = zustandHuelleInProzentNeu;
+    }
+
+    /**
+     * Methode gibt den Zustand der Huelle in Prozent zurueck
+     * @return Zustand der Huelle in Prozent
+     */
+    public int getHuelleInProzent() {
+        return huelleInProzent;
+    }
+
+    /**
+     * Methode legt den Zustand der Lebenserhaltungssysteme in Prozent fest
+     * @param zustandLebenserhaltungssystemeInProzentNeu Zustand der Lebenserhaltungssysteme zum Festlegen
+     */
+    public void setLebenserhaltungssystemeInProzent(int zustandLebenserhaltungssystemeInProzentNeu) { lebenserhaltungssystemeInProzent = zustandLebenserhaltungssystemeInProzentNeu; }
+
+    /**
+     * Methode gibt den Zustand der Lebenserhaltungssysteme in Prozent zurueck
+     * @return Zustand der Lebenserhaltungssysteme
+     */
+    public int getLebenserhaltungssystemeInProzent() {
+        return lebenserhaltungssystemeInProzent;
+    }
+
+    /**
+     * Methode legt den Namen des Schiffes fest
+     * @param schiffsname Name des Schiffes
+     */
+    public void setSchiffsname(String schiffsname) {
+        this.schiffsname = schiffsname;
+    }
+
+    /**
+     * Methode gibt den Namen des Schiffes zurueck
+     * @return Name des Schiffes
+     */
+    public String getSchiffsname() { return schiffsname; }
+
+    /**
+     * Methode legt die Anzahl der Androiden fest
+     * @param androidenAnzahl Anzahl der Androiden zum Festlegen
+     */
+    public void setAndroidenAnzahl(int androidenAnzahl) { this.androidenAnzahl = androidenAnzahl; }
+
+    /**
+     * Methode gibt die Anzahl der Androiden zurueck
+     * @return Anzahl der Androiden
+     */
+    public int getAndroidenAnzahl() {
+        return androidenAnzahl;
+    }
 }

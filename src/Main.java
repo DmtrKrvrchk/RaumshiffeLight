@@ -12,21 +12,15 @@ public class Main {
         Raumschiff vulkanier = new Raumschiff(3, random.nextInt(100), random.nextInt(100),
                 random.nextInt(100), 100, "Ni'Var", 5);
 
-        Ladung ladung = new Ladung("Ferengi Schneckensaft", 200);
-        Ladung ladung1 = new Ladung("Borg-Schrott", 5);
-        Ladung ladung2 = new Ladung("Rote Materie", 2);
-        Ladung ladung3 = new Ladung("Forschungssonde", 35);
-        Ladung ladung4 = new Ladung("Bat'leth Klingonen Schwert", 200);
-        Ladung ladung5 = new Ladung("Plasma-Waffe", 50);
-        Ladung ladung6 = new Ladung("Photonentorpedos", 20);
-
-        klingonen.addLadung(ladung);
-        klingonen.addLadung(ladung4);
-        romulaner.addLadung(ladung1);
-        romulaner.addLadung(ladung2);
-        romulaner.addLadung(ladung5);
-        vulkanier.addLadung(ladung3);
-        vulkanier.addLadung(ladung6);
+        klingonen.addLadung(new Transportgut("Ferengi Schneckensaft", 200, .2, .2, .1));
+        klingonen.addLadung(new Transportgut("Bat'leth Klingonen Schwert", 200, .8, .2, .1));
+        klingonen.addLadung(new Gast("Borg", 200, "Delta-Quadrant", "irrelevant, alphanumerischer Code", Verpflegungsart.ALLES_INKLUSIVE));
+        romulaner.addLadung(new Transportgut("Borg-Schrott", 5, .2, .5, .5));
+        romulaner.addLadung(new Transportgut("Rote Materie", 2, 1, 1, 1));
+        romulaner.addLadung(new Transportgut("Plasma-Waffe", 50, 1, 1, 1));
+        vulkanier.addLadung(new Transportgut("Forschungssonde", 35, 100, 50, 25));
+        vulkanier.addLadung(new Transportgut("Photonentorpedos", 20, 2, 2, 1));
+        vulkanier.addLadung(new Gast("Ferengi", 10, "Ferenginar", "Ferengi", Verpflegungsart.VOLLPENSION));
 
         klingonen.photonentorpedoSchiessen(romulaner); // Die Klingonen schießen mit dem Photonentorpedo einmal auf die Romulaner.
         romulaner.phaserkanoneSchiessen(klingonen); // Die Romulaner schießen mit der Phaserkanone zurück.

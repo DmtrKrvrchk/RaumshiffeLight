@@ -1,22 +1,20 @@
 /**
- * Klasse, um eine Ladung zu definieren
+ * Abstrakte Klasse, um eine Ladung zu definieren
  * @author d.krivoruchko
  */
-public class Ladung {
+public abstract class Ladung {
 
     /** Bezeichnung der Ladung */
-    private String bezeichnung;
+    protected String bezeichnung;
 
     /** Menge der Ladung */
-    private int menge;
+    protected int menge;
 
 
     /**
      * Standartkonstruktor der Ladung
      */
-    //TODO warum gibts diesen Kontruktur, wenn er nirgends verwendet wird?
     public Ladung() {}
-
 
     /**
      * Konstruktor der Ladung
@@ -30,14 +28,12 @@ public class Ladung {
 
 
     /**
-     * Methode legt eine neue Bezeichnung für die Ladung fest
+     * Methode legt eine neue Bezeichnung der Ladung fest
      * @param name Neue Bezeichnung
      */
-    //TODO wird aktuell nicht genutzt
     public void setBezeichnung(String name) {
         bezeichnung = name;
     }
-
 
     /**
      * Methode gibt die Bezeichnung der Ladung zurueck
@@ -47,7 +43,6 @@ public class Ladung {
         return bezeichnung;
     }
 
-
     /**
      * Methode legt neue Menge der Ladung fest
      * @param menge Neue Menge
@@ -56,22 +51,11 @@ public class Ladung {
         this.menge = menge;
     }
 
-
     /**
      * Methode gibt die Menge der Ladung zurueck
      * @return Menge der Ladung
      */
     public int getMenge() {
         return menge;
-    }
-
-
-    /**
-     * Methode gibt die Information über die Ladung in String-Form zurueck
-     * @return Information über die Ladung mit deren Bezeichnung und Ladung
-     */
-    @Override
-    public String toString() {
-        return "Bezeichnung der Ladung: "+bezeichnung+". Vorhandene Menge: "+menge;
     }
 }
